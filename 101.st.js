@@ -12,6 +12,7 @@
  *     this.left = this.right = null;
  * }
  */
+
 /**
  * @param {TreeNode} root
  * @return {boolean}
@@ -21,6 +22,11 @@ function isSymmetric(root) {
   return isSymmetric2(root.left, root.right);
 }
 
+/**
+ * @param {TreeNode} left
+ * @param {TreeNode} right
+ * @return {boolean}
+ */
 function isSymmetric2(left, right) {
   if (left === null && right === null) return true;
   if (left === null || right === null) return false;
