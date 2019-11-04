@@ -20,6 +20,10 @@ function isBalanced(root) {
   if (root == null) return true;
   if (root.left === root.right) return true;
 
+  /**
+   * @param {TreeNode} root
+   * @return {number}
+   */
   function deep(node) {
     if (node === null) return 0;
     if (!node.left && !node.right) return 1;
