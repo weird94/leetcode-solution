@@ -18,13 +18,13 @@
  * @return {boolean}
  */
 var isSameTree = function(p, q) {
-  if ((p && !q) || (!p && q)) return false;
   if (!p && !q) return true;
+  if (!p || !q) return false;
   if (p.val !== q.val) return false;
   return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };
 // @lc code=end
 
-// 57/57 cases passed (52 ms)
-// Your runtime beats 75.6 % of javascript submissions
+// 57/57 cases passed (44 ms)
+// Your runtime beats 97.73 % of javascript submissions
 // Your memory usage beats 86.67 % of javascript submissions (33.8 MB)
