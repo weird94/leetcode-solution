@@ -1,5 +1,3 @@
-# Leetcode Solutions
+## Leetcode Solutions
 
-## Current Progress
-
-28 / 1250
+[🔗leetcode](https://leetcode.com/superzw/)
