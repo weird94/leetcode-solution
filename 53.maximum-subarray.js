@@ -7,50 +7,20 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function(nums) {
-  let last = -Infinity;
+var maxSubArray = function (nums) {
+  let max = nums[0];
   let current = nums[0];
 
-  let i = 1;
-  const len = nums.length;
-  const maxIndex = len - 1;
-
-  while (i < len) {
-    const num = nums[i];
-    console.log('loop', i, num);
+  for (let i = 1, len = nums.length; i < len; i++) {
+    const v = nums[i];
     if (current < 0) {
-      if (current < num) {
-        current = num;
-      }
+      current = v;
     } else {
-      if (num >= 0) {
-        if (current < 0) {
-          current = num;
-        } else {
-          current += num;
-        }
-      } else {
-        if (last < current) {
-          last = current;
-        }
-        let currentNum = num;
-        while (currentNum <= 0 && i < maxIndex) {
-          i++;
-          let num1 = nums[i];
-          currentNum += num1;
-        }
-        if (current + currentNum < 0) {
-          current = -Infinity;
-        } else {
-          current += currentNum;
-        }
-      }
+      current += v;
     }
-    i++;
+
+    max = Math.max(max, current);
   }
 
-  return Math.max(last, current);
+  return max;
 };
-
-console.log(maxSubArray([3, -2, -3, -3, 1, 3, 0]));
-console.log(maxSubArray([3, -2, -3, -3, 1, 3, 0].reverse()));

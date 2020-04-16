@@ -8,30 +8,24 @@
  * @param {number} val
  * @return {number}
  */
-const removeElement = function(nums, val) {
+const removeElement = function (nums, val) {
   let len = nums.length;
   let lastMatch = -1;
-  let NaNCount = 0;
+  let matchCount = 0;
   for (let nextIndex = 0; nextIndex < len; nextIndex++) {
     const current = nums[nextIndex];
     if (current === val) {
-      NaNCount++;
+      matchCount++;
       if (lastMatch === -1) {
         lastMatch = nextIndex;
       }
     } else {
       if (lastMatch !== -1) {
         nums[lastMatch] = current;
-        if (lastMatch === nextIndex - 1) {
-          // 交换
-          lastMatch = nextIndex;
-        } else {
-          // 消费
-          lastMatch++;
-        }
+        lastMatch++;
       }
     }
   }
 
-  return len - NaNCount;
+  return len - matchCount;
 };

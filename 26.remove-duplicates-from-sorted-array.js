@@ -7,7 +7,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const removeDuplicates = function(nums) {
+const removeDuplicates = function (nums) {
   let lastNumber = NaN;
   let duplicateCount = 0;
   const len = nums.length;
@@ -31,13 +31,7 @@ const removeDuplicates = function(nums) {
     } else {
       if (lastNaN !== -1) {
         nums[lastNaN] = current;
-        if (lastNaN === nextIndex - 1) {
-          // 交换
-          lastNaN = nextIndex;
-        } else {
-          // 消费
-          lastNaN++;
-        }
+        lastNaN++;
       }
     }
   }
