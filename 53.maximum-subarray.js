@@ -24,3 +24,5 @@ var maxSubArray = function (nums) {
 
   return max;
 };
+// 执行用时 : 60 ms, 在所有 JavaScript 提交中击败了 96.51% 的用户
+// 内存消耗 : 35.3 MB, 在所有 JavaScript 提交中击败了 94.12% 的用户

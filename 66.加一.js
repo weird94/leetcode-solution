@@ -9,7 +9,7 @@
  * @param {number[]} digits
  * @return {number[]}
  */
-var plusOne = function(digits) {
+var plusOne = function (digits) {
   let shouldPlus = false;
   const len = digits.length;
   const addedLst = (digits[len - 1] + 1) % 10;

@@ -14,7 +14,7 @@ const map = JSON.parse(
  * @param {number} n
  * @return {string}
  */
-var convertToTitle = function(n) {
+var convertToTitle = function (n) {
   if (n < 27) return map[n];
   let title = "";
 

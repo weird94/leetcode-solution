@@ -32,14 +32,14 @@ const map = {
   W: 23,
   X: 24,
   Y: 25,
-  Z: 26
+  Z: 26,
 };
 
 /**
  * @param {string} s
  * @return {number}
  */
-var titleToNumber = function(s) {
+var titleToNumber = function (s) {
   const chars = s.split("");
   let ans = 0;
   const len = chars.length;
