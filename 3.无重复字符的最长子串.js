@@ -10,7 +10,7 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function (str) {
-  const charPosition = {};
+  const charPosition = Object.create(null);
   let max = 0;
   let current = 0;
   let start = 0;
@@ -35,6 +35,6 @@ var lengthOfLongestSubstring = function (str) {
 };
 // @lc code=end
 
-// 987/987 cases passed (120 ms)
-// Your runtime beats 43.69 % of javascript submissions
-// Your memory usage beats 52.05 % of javascript submissions (40.2 MB)
+// 987/987 cases passed (84 ms)
+// Your runtime beats 97.16 % of javascript submissions
+// Your memory usage beats 78.08 % of javascript submissions (37.6 MB)

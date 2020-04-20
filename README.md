@@ -1,3 +1,3 @@
 ## Leetcode Solutions
 
-[🔗leetcode](https://leetcode.com/superzw/)
+[🔗leetcode](https://leetcode-cn.com/u/vigorous-davinci/)
