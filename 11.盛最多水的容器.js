@@ -11,6 +11,7 @@
 // /**
 //  * @param {number[]} heights
 //  * @return {number}
+//  * 暴力求解
 //  */
 // var maxArea = function (heights) {
 //   let max = 0;
